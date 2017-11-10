@@ -18,7 +18,9 @@ class String
     if self.length == 0
       0
     else
-      self.split(/[.!?]/).select{|element| element if element != ""}.length
+      # self.split(/[.!?]+/).select{|element| element if element != ""}.length
+      # THe plus sign after the [] indicates look for multiple values of .!?
+      self.split(/[.!?]+/).length
     end
   end
 end
